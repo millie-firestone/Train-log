@@ -1,7 +1,7 @@
 {
-	"name": "rigdonos",
+	"name": "train-log",
 	"version": "1.1.0",
-	"description": "A desktop environment written in TypeScript and React",
+	"description": "A mobile app written in TypeScript and React for tracking trains sighted and collected",
 	"main": "dist/index.js",
 	"scripts": {
 		"build": "npm run clean && tsc && npm run copy-files",
@@ -11,9 +11,9 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "github.com/billyrigdon/RigdonOS"
+		"url": "github.com/millie-firestone/Train-log"
 	},
-	"author": "Billy Rigdon",
+	"author": "Millie Firestone",
 	"license": "GPL-3.0-or-later",
 	"dependencies": {
 		"cors": "^2.8.5",
