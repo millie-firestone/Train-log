@@ -1,7 +1,7 @@
 // UserController.ts
 
 import { Request, Response } from 'express';
-import UserModel, { User } from "../Models/UserModel";
+import UserModel from "../Models/UserModel";
 import jwt from 'jsonwebtoken';
 
 export const loginUser = async  (req: Request, res: Response) => {
@@ -17,7 +17,7 @@ export const loginUser = async  (req: Request, res: Response) => {
         }
 
         // Generate a JWT token for authentication
-        const token = generateJwtToken(user);
+        const token = generateJwtToken("User");
 
         res.json({token});
     } catch (error) {
@@ -25,11 +25,11 @@ export const loginUser = async  (req: Request, res: Response) => {
     }
 };
 
-const crypto = reqiure('crypto');
+const crypto = require('crypto');
 
 const secretKey = crypto.randomBytes(32).toString('hex');
 console.log(secretKey);
 
-const generateJwtToken = (user: User) => {
-    return jwt.sign({ username: user.username }, secretKey, { expiresIn: '24h' });
+const generateJwtToken = (user: 'User') => {
+    return jwt.sign({ username: 'User'}, secretKey, { expiresIn: '24h' });
 };
